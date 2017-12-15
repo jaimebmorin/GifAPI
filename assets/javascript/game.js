@@ -40,7 +40,7 @@ $("#gif-button").on("click", "button", function() {
 });
 
 
-
+});
 
 
 
@@ -52,7 +52,8 @@ $("#add-search").on("click", function() {
     gifButton.text(gifInfo);
     gifButton.attr("data-button", gifInfo);
     $("#gif-button").append(gifButton);
+
 });
 });
-});
+
 
