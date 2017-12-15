@@ -27,18 +27,18 @@ $("#gif-button").on("click", "button", function() {
   }).done(function(response) {
     var results = response.data
     console.log(results);
-//    for (var i = 0; i < results.length; i++) {
-//    var animalDiv = $("<div>");
-//    var rating = results[i].rating;
-//    var p = $("<p>").text("Rating: " + rating);
-//    var animalImage = $("<img>");
-//    animalImage.attr("src", results[i].images.fixed_height.url);
-//    animalImage.prepend(p);
-//    animalDiv.prepend(animalImage);
-//    $("#gifs-appear-here").prepend(animalDiv);
-
+    for (var i = 0; i < results.length; i++) {
+    var animalDiv = $("<div>");
+    var rating = results[i].rating;
+    var p = $("<p>").text("Rating: " + rating);
+    var animalImage = $("<img>");
+    animalImage.attr("src", results[i].images.fixed_height.url);
+    animalImage.prepend(p);
+    animalDiv.prepend(animalImage);
+    $("#giffygif").prepend(animalDiv);
+    }
+    
 });
-
 
 });
 
