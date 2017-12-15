@@ -12,20 +12,21 @@ for (var i = 0; i < animalArray.length; i++) {
 }
 
 //if an animal button is clicked
-$("#gif-button").on("click", function() {
+$("#gif-button").on("click", "button", function() {
     var searchid = $(this).attr("data-button");
     console.log(searchid);
 
 
 // I"ve grayed out this section of code until I can get the attribute data-button to come to this function.
-//   var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-//   searchid + "&api_key=dc6zaTOxFJmzC&limit=10";
+   var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+   searchid + "&api_key=dc6zaTOxFJmzC&limit=10";
 
-//  $.ajax({
-//    url: queryURL,
-//    method: "GET"
-//  }).done(function(response) {
-//    var results = response.data
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).done(function(response) {
+    var results = response.data
+    console.log(results);
 //    for (var i = 0; i < results.length; i++) {
 //    var animalDiv = $("<div>");
 //    var rating = results[i].rating;
@@ -51,8 +52,7 @@ $("#add-search").on("click", function() {
     gifButton.text(gifInfo);
     gifButton.attr("data-button", gifInfo);
     $("#gif-button").append(gifButton);
-
+});
+});
 });
 
-
-});
